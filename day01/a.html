@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='keywords' content='关键词'>
+    <meta name='description' content='描述的文字'>
+    <title>a 标签的基本用法</title>
+    <style>
+    div{width:500px;height:500px;background:green;line-height: 500px;}
+    #box1{
+        
+    }
+    #box2{
+       background:red;
+    }
+
+    #box3{
+        background:gold;
+    }
+    </style>
+</head>
+<body>
+    <!-- 锚点跳转：
+           1、当href的值为id的时候，会跳转到相应的模块；
+           2、当href的值为#的时候，会迅速跳转到页面的顶部；
+           3、当href的值为javascript:;的时候，禁止跳转;
+
+           target的经常用到的两个值：
+             1、_blank 在新的窗口打开;
+             2、_self  在当前窗口打开;
+           
+    
+    -->
+     <p>
+         <a href="#box1">box1</a>
+         <a href="#box2">box2</a>
+         <a href="#box3">box3</a>
+         <a href="javascript:;">百度</a>
+         <a href="http://www.baidu.com" target="_blank">百度</a>
+     </p>
+     <div id="box1">box1</div>
+     <div id="box2">box2</div>
+     <div id="box3">box3</div>
+     <a href="#">回到顶部</a>
+</body>
+</html>

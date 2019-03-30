@@ -1,0 +1,11 @@
+<!DOCTYPE html>  // 声明是html文档
+<html lang="zh-CN"> //lang="zh-CN" 中文简体
+  <head>
+     <meta charset="utf-8"> // 网页中用的编码，通常由gb2312、utf-8（国际通用的编码），不写的话会乱码
+     <meta name="keywords " content="关键字的内容">
+     <meta name="description" content="描述的文字">
+     <title>网页标题</title>
+  </head>
+  <body>
+  </body>
+<html>
