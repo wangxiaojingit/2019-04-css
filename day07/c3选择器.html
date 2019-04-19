@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='keywords' content='关键词'>
+    <meta name='description' content='描述的文字'>
+    <title>c3选择器</title>
+    <style>
+        /* 
+        odd 奇数
+        even 偶数
+         */
+        
+    /* .box>li:nth-child(2n+1){
+        background:green;
+    } */
+    .box>li:first-child{
+        background:green;
+    }
+    .box>li:last-child{
+        background:blanchedalmond;
+    }
+    /* 倒数 */
+    .box>li:nth-last-child(2){
+         background:blue;
+    }
+    </style>
+</head>
+<body>
+    <ul class="box">
+        <li>li1</li>
+        <li>li2</li>
+        <li>li3</li>
+        <li>li4</li>
+        <li>li5</li>
+        <li>li6</li>
+    </ul>
+</body>
+</html>

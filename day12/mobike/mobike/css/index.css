@@ -1,0 +1,209 @@
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    font-family: 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft Yahei', 'WenQuanYi Micro Hei', Arial, Verdana, sans-serif;
+}
+html,body,.banner,.bannerBox,.bannerBox>li{
+   
+    height:100%;
+}
+/* 版心 */
+.md{
+    width:1080px;
+    padding:0 20px;
+    box-sizing: border-box;
+    margin:0 auto;
+}
+.banner{
+    position:relative;
+}
+.nav{
+    width:100%;
+    position: absolute;
+    left:0;
+    top:0px;
+    
+}
+.navIn{
+   
+    height:80px;
+    padding-top: 21px;
+    box-sizing: border-box;
+}
+.bannerBox li>a{
+    
+   display:block;
+   background:url("../images/hero-bg-1.jpg") center center;
+   height:100%;
+   background-size:cover;
+}
+
+.logo{
+    width:100px;
+    height:37px;
+    float:left;
+    overflow: hidden;
+   
+}
+.logo p{
+    margin-left:-9999px;
+}
+.nav-right{
+    float:right;
+}
+.nav-right>li{
+    float:left;
+}
+.nav-right a{
+  font-size:16px;
+  color:#fff;
+  padding:8px 20px;
+  display:block;
+}
+
+.textBox{
+    width:100%;
+    
+    position:absolute;
+    left:0;
+    top:50%;
+    transform: translate(0,-50%);
+}
+.textBox h3{
+    font-size:67px;
+    color:#fff;
+    margin-bottom:20px;
+}
+
+.textBox a{
+    width:295px;
+    box-sizing:border-box;
+    display:block;
+    color:#fff;
+    padding:14px 26px;
+    font-size:22px;
+    font-weight: 700;
+    background:rgba(0,0,0,.6);
+    border-radius:10px;
+}
+
+.listBox>li{
+    width:25%;
+    height:260px;
+    border:2px solid #fff;
+    border-left-width:1px;
+    border-right-width:1px;
+    box-sizing: border-box;
+    float:left;
+    background:url("../images/libg.jpg") center center no-repeat;
+    background-size:cover;
+
+}
+.listBox>li:nth-child(1){
+    border-left:0px;
+}
+.listBox>li:last-child{
+    border-right:0px;
+}
+.listBox>li>a{
+    display:block;
+    height:100%;
+    padding-top: 33px;
+    box-sizing: border-box;
+}
+.listBox a p{
+   
+    text-align:center;
+    font-size:24px;
+    color:#fff;
+
+}
+.linksIn{
+    height:142px;
+    
+    box-sizing: border-box;
+}
+.linksIn>li{
+    /* height:142px; */
+    float:left;
+    padding: 45px 0;
+    box-sizing: border-box;
+    width:33.33%;
+
+}
+
+.linksIn .icon{
+    width:50px;
+    height:50px;
+    background:url("../images/icon-wechat.png") center center no-repeat;
+    background-size:contain;
+    float:left;
+    margin-right:10px;
+
+}
+.linksIn .iconText{
+    float:left;
+    font-size:16px;
+    line-height: 22px;
+}
+.hbBox{
+    margin:0 auto;
+    width:220px;
+
+}
+.jifenBox{
+    float:right;
+}
+
+.linksIn li:nth-child(2) .icon{
+    background-image:url("../images/icon-rp.png");
+}
+.linksIn li:nth-child(3) .icon{
+    background-image:url("../images/icon-credit.png");
+}
+
+/* 
+  小于等于1080的时候：
+  1、导航的右边消失
+  2、版心消失
+  3、.listBox>li 变成50%;
+  小于等于640的时候：
+  1、.listBox>li 宽度变成100%
+  2、.linksIn>li 宽度变成100%，并且都让左对齐
+*/
+.listBox>li{
+    width:25%;
+}
+
+@media screen and (max-width:1080px){
+  .md{
+      width:100%;
+  }
+  .nav-right{
+    display:none;
+  }
+  .listBox>li{
+      width:50%;
+  }
+}
+
+@media screen and (max-width:640px){
+    .listBox>li{
+        width:100%;
+
+    }
+    .linksIn>li{
+        width:100%;
+    }
+    .hbBox{
+       margin:0;
+    }
+    .jifenBox{
+        float:left;
+    }
+    .linksIn>li{
+        padding:20px 0;
+    }
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='keywords' content='关键词'>
+    <meta name='description' content='描述的文字'>
+    <title>Document</title>
+    <style>
+    .box1{
+        width:300px;
+        height:400px;
+        /* 背景颜色 */
+        background-color:lightcyan;
+        /* 背景图片 */
+        background-image:url("head.gif");
+        /* 背景位置 */
+        background-position:left top;
+        /* 控制背景图片是否平铺 */
+        background-repeat:no-repeat;
+        /* 背景图片的尺寸可以是具体的像素值 */
+        /* background-size:300px 300px; */
+        /* 还可以是百分比 */
+        /* background-size:100% 100%; */
+        /* background-size:cover; */
+        background-size:contain;
+        /* 复合写法 */
+        background:pink url("head.gif")   center center  no-repeat;
+        /* background-size:cover; */
+    }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+</body>
+</html>

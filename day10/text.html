@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='keywords' content='关键词'>
+    <meta name='description' content='描述的文字'>
+    <title>Document</title>
+    <style>
+        .box{
+            width:200px;
+            height:200px;
+            background:green;
+             /* animation: run 3s linear 5s;  */
+             /* forwards：当动画结束，停留在最后一帧
+             */
+            animation: run 3s linear 5s  forwards;
+            /* 
+            backwards，在动画中有延迟的时候，设置backwards，会迅速的跑到第一桢开始执行动画
+             both 就是forwards 和backwards 的综合
+            */
+             /* animation: run 3s linear 5s  backwards ;  */
+        }
+        
+
+        @keyframes run{
+            0%{
+                transform:translateX(200px);
+            }
+
+            100%{
+                transform:translateX(800px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

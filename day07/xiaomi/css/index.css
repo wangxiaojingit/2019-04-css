@@ -1,0 +1,149 @@
+.md{
+    width:1226px;
+    margin:0 auto;
+}
+.banner{
+    height:460px;
+    position: relative;
+}
+.bannerIn li{
+    background:url("../images/banner.jpg") center center no-repeat;
+    background-size:cover;
+}
+.bannerIn li a{
+    display:block;
+    height:460px;
+}
+.bannerBar{
+    width:234px;
+    height:460px;
+    padding:20px 0;
+    box-sizing:border-box;
+    background:rgba(0,0,0,.6);
+    position: absolute;
+    left:0;
+    top:0;
+}
+.bannerBar>li{
+   height:42px;
+   line-height:42px;
+   text-indent:30px;
+   background:url("../images/arrow2.png") 200px center no-repeat;
+}
+.bannerBar>li a{
+    color:#fff;
+    font-size:14px;
+}
+.bannerBar>li:hover{
+    background-color:#ff6700;
+}
+.arrowRight,.arrowLeft{
+    width:41px;
+    height:69px;
+    background: url("../images/icon-slides.png") no-repeat;
+    position: absolute;
+    top:50%;
+    margin-top:-35px;
+}
+.arrowLeft{
+    left:234px;
+}
+.arrowLeft:hover{
+    background-position:-84px;
+}
+.arrowRight{
+   right:0px;
+   background-position:-41px 0;
+
+}
+.arrowRight:hover{
+    background-position:-126px 0;
+}
+.hot{
+    margin-top:14px;
+}
+.hotLeft{
+    float:left;
+    width:234px;
+    height:170px;
+    background:#5f5750;
+}
+.hotLeft>li{
+    position:relative;
+}
+.contentBox{
+    position:absolute;
+    left:0px;
+    top:0px;
+    background:pink;
+}
+.hotRight{
+    float:left;
+}
+.hotRight>li{
+    float:left;
+    margin-left:14px;
+}
+.hotRight>li a{
+    display:block;
+    width:316px;
+    height:170px;
+    background:url("../images/hot1.jpg") center center no-repeat;
+    background-size:cover;
+}
+
+.hotLeft>li{
+    width:33.33%;
+    height:82px;
+    float:left;
+    padding-top:18px;
+    box-sizing:border-box;
+}
+.hotLeft>li>a{
+    display:block;
+    color:rgba(255,255,255,.7);
+    
+}
+.hotLeft>li{
+    position:relative;
+}
+.hotLeft>li::before{
+   display:block;
+   content:"";
+   width:1px;
+   height:70px;
+   position: absolute;
+   right:0;
+   top:6px;
+   background:#665e57;
+}
+
+.hotLeft>li::after{
+    display:block;
+    content:"";
+    height:1px;
+    width:70px;
+    position: absolute;
+    left:6px;
+    bottom:0px;
+    background:#665e57;
+
+}
+
+.hotLeft>.nobottom::after{
+    display:none;
+
+}
+
+.hotLeft>.noleft::before{
+    display:none;
+}
+.icon-shouji-copy{
+    font-size:24px;
+    margin-bottom:4px;
+}
+.hotLeft>li>a p{
+    text-align:center;
+}
+
+

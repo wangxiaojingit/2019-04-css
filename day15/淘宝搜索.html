@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    *{
+        margin:0;
+        padding:0;
+    }
+    .clearfix:after{
+        display:block;
+        content:"";
+        font-size:0;
+        height:0;
+        visibility: hidden;
+        clear:both;
+    }
+    .clearfix:after{
+        *zoom:1;
+    }
+    .search{
+      width:299px;
+      border:1px solid #333;
+    }
+    .left{
+        height:50px;
+        width:245px;
+        border-right:1px solid #333;
+        box-sizing:border-box;
+        float:left;
+        position:relative;
+
+    }
+    .right{
+        width:52px;
+        height:50px;
+        line-height:50px;
+        text-align:center;
+        float:left;
+
+    }
+    .right:hover{
+        background:#ff6700;
+        color:#fff;
+    }
+    input{
+        border:none;
+        height:100%;
+        width:100%;
+        outline:none;
+    }
+    .keywords span{
+        font-size:12px;
+        padding:0 5px;
+        background:#eee;
+        margin-left:5px;
+        float:left;
+    }
+    .keywords{
+        position:absolute;
+        right:10px;
+        top:17px;
+    }
+    .keywords>span:hover{
+        background-color:#ff6700;
+        color:#fff;
+    }
+    </style>
+</head>
+<body>
+    <div class="search clearfix">
+        <div class="left">
+            <input type="text">
+            <div class="keywords clear">
+                <span>小米</span><span>小米se</span>
+            </div>
+        </div>
+        <div class="right">搜索</div>
+    </div>
+</body>
+</html>

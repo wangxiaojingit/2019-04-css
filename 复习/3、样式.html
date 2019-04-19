@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /* 
+          *代表通配符选择器，代表选中所有的元素，让他们的margin值和padding值都为0；
+        
+         */
+        /* *{
+            margin:0;
+            padding:0;
+        } */
+      h1{
+          background-color:green;
+          /* 文字颜色 */
+          color:tomato;
+          /* 宽度 */
+          width:300px;
+          /* 高度 */
+          height:300px;
+          /* 文字对齐:
+
+             left:左
+             right：右
+             center：居中
+          
+           */
+          text-align: center;
+          
+      }
+      p{
+          background:cornflowerblue;
+          /* 让文字垂直居中：让高度height的值和line-height的值一致 */
+          height:50px;
+          /* 行高 */
+          line-height:50px;
+          text-align: center;
+      }
+      a{
+          /* 去除a标签的下划线 */
+          text-decoration: none;
+      }
+      /* 去除列表前面自带的默认样式 */
+     
+      ul,ol{
+          list-style: none;
+      }
+      div{
+          width:300px;
+          height:300px;
+          background:green;
+          /* 让块级元素水平居中 */
+          margin:0 auto;
+      }
+    </style>
+</head>
+<body>
+    <div>box1</div>
+    <!-- <h1>标题1</h1> -->
+    <p>段落p</p>
+    <a href="http://www.baidu.com">百度</a>
+    <!-- ul>li{列表$}*6 -->
+    <ul>
+        <li>列表1</li>
+        <li>列表2</li>
+        <li>列表3</li>
+        <li>列表4</li>
+        <li>列表5</li>
+        <li>列表6</li>
+    </ul>
+
+   
+    
+</body>
+</html>

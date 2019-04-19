@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="iconfont.css">
+    <style>
+        *{margin:0;padding:0;}
+        .box1{
+            width:100px;
+            height:100px;
+            background:pink;
+            position:relative;
+        }
+        ul,ol{
+            list-style:none;
+        }
+        .box2{
+            width:200px;
+            height:200px;
+            background:gold;
+        }
+        .main{
+            width:234px;
+            overflow:hidden;
+            border:1px solid green;
+            margin:0 auto;
+
+        }
+        .main>li{
+            width:33.33%;
+            height:82px;
+            float:left;
+           
+            text-align:center;
+            background:cadetblue;
+        }
+        .main>li{
+            position:relative;
+        }
+        .main>li::before{
+            display:block;
+            content:"";
+            width:1px;
+            height:70px;
+            background:#fff;
+            position:absolute;
+            right:0;
+            top:6px;
+        }
+        .main>li::after{
+            display:block;
+            content:"";
+            width:70px;
+            height:1px;
+            background:#fff;
+            position:absolute;
+            bottom:0;
+            left:6px;
+        }
+        .main>.noBot::after{
+            display:none;
+        }
+        .main>.noLeft::before {
+            display:none;
+        }
+        /* .box>p:nth-child(odd){
+            background:green;
+        } */
+        ul>li:nth-child(even){
+           
+        }
+        ul>li:last-child{
+            /* background:green; */
+        }
+        /* .box>p:nth-of-type(5){
+            background:green;
+        } */
+        ul>li:nth-last-child(2){
+            background:gold;
+        }
+       .box>p:nth-last-of-type(2){
+           background:red;
+       }
+
+    </style>
+</head>
+<body>
+    <!-- <ul class="main">
+        <li>
+            <a href=""> 
+              <i class="icon iconfont icon-shouji-copy"></i>
+              <p>选购手机</p>
+            </a>
+        </li>
+        <li><a href="">企业团购</a></li>
+        <li class="noLeft"><a href="">F码通道</a></li>
+        <li class="noBot"><a href="">选购手机</a></li>
+        <li class="noBot"><a href="">企业团购</a></li>
+        <li class="noLeft noBot"><a href="">F码通道</a></li>
+    </ul> -->
+   <ul>
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+      <li>4</li>
+      <li>5</li>
+      <li>6</li>
+   </ul>
+    <div class="box">
+     <p>段落1</p>
+     <p>段落2</p>
+     <p>段落3</p>
+     <p>段落4</p>
+     <h1>h1</h1>
+     <h2>h2</h2>
+     <h3>h3</h3>
+     <p>段落5</p>
+     
+   </div>
+</body>
+</html>

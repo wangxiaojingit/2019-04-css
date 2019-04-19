@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    /* 清除页面上所有元素默认自带的margin值和padding */
+    *{
+        margin:0;padding:0;
+    }
+    /* 清除a标签的下划线 */
+    a{
+        text-decoration: none;
+    }
+    /* 清除列表前面的默认样式 */
+    ul,ol{
+        list-style: none;
+    }
+    .main{
+        width:600px;
+        height:600px;
+        background:cornsilk;
+        margin:0 auto;
+
+    }
+    h3{
+        /* 文字大小 */
+        font-size:20px;
+        /* 控制文本的粗细
+           normal 让粗体变细
+           bold  加粗
+        */
+        font-weight:normal;
+        text-indent: 20px;
+    }
+    .more{
+        font-size:12px;
+    }
+    ul>li{
+         height:50px;
+         line-height:50px;
+         /* 文字缩进 */
+         text-indent: 20px;
+    }
+    .box a{
+        color:green;
+    }
+    .color1{
+        color:red;
+    }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <!-- 上面标题的大盒子 -->
+        <h3>
+          <span>最新动态</span><a href="" class="more">更多</a>
+        </h3>
+        <!-- 下面列表的大盒子 -->
+        <ul class="box">
+           <li><a  href=""><span class="color1">最新动态视频：</span>珠峰十周年记录片</a></li>
+           <li><a  href=""><span class="color1">最新动态视频：</span>珠峰十周年记录片</a></li>
+           <li><a  href=""><span class="color1">最新动态视频：</span>珠峰十周年记录片</a></li>
+           <li><a  href=""><span class="color1">最新动态视频：</span>珠峰十周年记录片</a></li>
+           <li><a  href=""><span class="color1">最新动态视频：</span>珠峰十周年记录片</a></li>
+          
+        </ul>
+    </div>
+</body>
+</html>

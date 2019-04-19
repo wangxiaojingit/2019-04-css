@@ -1,0 +1,161 @@
+.md{
+    width:1226px;
+    margin:0 auto;
+
+}
+.banner{
+    background:pink;
+    height:460px;
+    position:relative;
+}
+.bannerBox a{
+    display:block;
+    height:460px;
+    background:url("../images/banner.jpg") center center no-repeat;
+    background-size:cover;
+}
+.bannerBar{
+    width:234px;
+    height:460px;
+    /* 最后一个值代表的是透明度 */
+    background:rgba(0,0,0,0.6);
+    position:absolute;
+    left:0;
+    top:0;
+    padding:20px 0;
+    box-sizing:border-box;
+}
+.bannerBar li{
+    font-size:14px;
+    position:relative;
+}
+.bannerBar li a{
+    color:#fff;
+    height:42px;
+    line-height:42px;
+    display:block;
+    text-indent: 30px;
+    background:url("../images/arrow2.png") 200px center no-repeat;
+
+}
+.bannerBar li a:hover{
+    background-color:#ff6700;
+}
+.arrowLeft,.arrowRight{
+    width:41px;
+    height:69px;
+    background:url("../images/icon-slides.png") no-repeat;
+    position:absolute;
+    
+    top:50%;
+    margin-top:-35px;
+}
+.arrowLeft{
+    left:234px;
+    background-position:-84px 0;
+}
+.arrowRight{
+    right:0;
+    background-position:-126px 0;
+}
+.arrowLeft:hover{
+    background-position:0 0;
+}
+.arrowRight:hover{
+    background-position:-42px 0;
+}
+
+.content{
+    width:500px;
+    height:460px;
+    background:green;
+    position: absolute;
+    left: 234px;
+    top: -20px;
+    display:none;
+    /* 层级越高，就在上面，层级低的在下面 */
+    z-index:999;
+}
+.bannerBar>li:hover .content{
+    display: block;
+}
+
+.hot{
+    margin-top:14px;
+}
+.hotLeft{
+    width:234px;
+    height:170px;
+    background:#5f5750;
+    float:left;
+
+}
+.hotRight{
+   
+    height:170px;
+    float:left;
+}
+.hotRight>li{
+    float:left;
+    margin-left:14px;
+}
+.hotRight>li>a{
+    display:block;
+    width:316px;
+    height:170px;
+    background:url("../images/hot1.jpg") center center no-repeat;
+    background-size:cover;
+}
+
+.hotLeft>li{
+    width:33.33%;
+    height:82px;
+    text-align:center;
+    position:relative;
+    float:left;
+
+}
+.hotLeft>li>a{
+    color:rgba(255,255,255,.7);
+}
+.hotLeft>li p{
+    margin-top:18px;
+    font-size:24px;
+} 
+.hotLeft>li h3{
+    font-weight: normal;
+    font-size:12px;
+    margin-top:4px;
+}
+
+.hotLeft>li::before{
+    display:block;
+    content:"";
+    width:1px;
+    height:70px;
+    background:#665e57;
+    position:absolute;
+    left:0;
+    top:6px;
+}
+/* .htoLeft>li:nth-child(1)::before{
+    display:none;
+} */
+.hotLeft .noRig::before{
+    display:none;
+}
+
+.hotLeft>li::after{
+    display:block;
+    content:"";
+    width:64px;
+    height:1px;
+    position:absolute;
+    left:6px;
+    bottom:0;
+    background:#665e57;
+}
+
+.hotLeft .noBot::after{
+    display:none;
+}

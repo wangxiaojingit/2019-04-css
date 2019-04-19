@@ -1,0 +1,178 @@
+<!DOCTYPE html><html><head><title>第六天css笔记</title><meta charset='utf-8'><link href='https://cdn.maxiang.io/res-min/themes/marxico.css' rel='stylesheet'><style>
+.note-content  {font-family: ADMUI3Lg, 'Helvetica Neue', Arial, 'Hiragino Sans GB', STHeiti, 'Microsoft YaHei', 'WenQuanYi Micro Hei', SimSun, Song, sans-serif;}
+
+</style></head><body><div id='preview-contents' class='note-content'>
+                        
+                    
+
+<div><div class="toc"><div class="toc">
+<ul>
+<li><ul>
+<li><ul>
+<li><ul>
+<li><a href="#第六天css笔记">第六天css笔记</a><ul>
+<li><a href="#想让两个块级元素在一行显示转换为行内块存在的一些问题">想让两个块级元素在一行显示，转换为行内块存在的一些问题。</a></li>
+<li><a href="#问题一元素之间会有一个缝隙产生的原因就是换行引起的">问题一：元素之间会有一个缝隙，产生的原因就是（换行引起的）</a></li>
+<li><a href="#问题二如果元素里面有文字默认的对齐方式是基线对齐会造成一定的问题">问题二：如果元素里面有文字，默认的对齐方式是基线对齐，会造成一定的问题。</a></li>
+</ul>
+</li>
+<li><a href="#浮动">浮动</a></li>
+<li><a href="#浮动的特点">浮动的特点</a></li>
+<li><a href="#浮动造成盒子塌陷解决方法">浮动造成盒子塌陷解决方法：</a></li>
+<li><a href="#浮动的本质最初是为了实现图文混排场景一张图片和一些文字当我们给图片设置浮动的时候文字就会环绕图片进行排版">浮动的本质：最初是为了实现图文混排。场景，一张图片和一些文字，当我们给图片设置浮动的时候，文字就会环绕图片进行排版。</a></li>
+<li><a href="#伪类">伪类</a></li>
+<li><a href="#overflow-几个值">overflow 几个值：</a></li>
+<li><a href="#background几个常用的属性">background几个常用的属性</a></li>
+<li><a href="#绝对路径和相对路径">绝对路径和相对路径</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+<h4 id="第六天css笔记">第六天css笔记</h4>
+
+<h5 id="想让两个块级元素在一行显示转换为行内块存在的一些问题">想让两个块级元素在一行显示，转换为行内块存在的一些问题。</h5>
+
+
+
+<h5 id="问题一元素之间会有一个缝隙产生的原因就是换行引起的">问题一：元素之间会有一个缝隙，产生的原因就是（换行引起的）</h5>
+
+<blockquote>
+  <p>解决的办法： <br>
+   1、消除换行符，让代码在一行显示 <br>
+   2、给它的父级写一个font-size:0;如果有元素里面有文字，可以单独对它设置文字大小。</p>
+</blockquote>
+
+<h5 id="问题二如果元素里面有文字默认的对齐方式是基线对齐会造成一定的问题">问题二：如果元素里面有文字，默认的对齐方式是基线对齐，会造成一定的问题。</h5>
+
+<blockquote>
+  <p>解决的办法：vertical-align：top 或者vertical-align：middle;等。</p>
+</blockquote>
+
+<h4 id="浮动">浮动</h4>
+
+<blockquote>
+  <p>使用场景：想让块级元素在一行显示，可以用浮动。 <br>
+  浮动的几个值float:</p>
+  
+  <ul><li><p>左浮动：float:left；</p></li>
+  <li><p>右浮动：float:right;</p></li>
+  <li><p>float:none(默认值)；</p></li>
+  </ul>
+</blockquote>
+
+<h4 id="浮动的特点">浮动的特点</h4>
+
+<ul><li><p>1、脱离文档流</p></li>
+<li><p>2、浮动的方向是相对父级来说的。父亲是它的参照物</p></li>
+<li><p>3、一般来说宽度是可继承的，一旦写了浮动，这个宽度就不能继承父亲的宽度，而是由自身内容大小决定的。</p></li>
+<li><p>4、一旦设置浮动，行内元素设置宽高也能起作用。</p></li>
+</ul>
+
+
+
+<h4 id="浮动造成盒子塌陷解决方法">浮动造成盒子塌陷解决方法：</h4>
+
+<ul><li><p>1、给父级盒子加高度</p></li>
+<li><p>2、给浮动元素的父级的末尾添加一个空div，给它设置clear：both；</p>
+
+<ul>
+<li><p>clear：left；清除左浮动</p></li>
+<li><p>clear：right；清除右浮动</p></li>
+<li><p>clear：both；清除左右浮动（通常用这个）</p></li></ul></li>
+<li><p>3、谁浮动，就给谁的父级的类名中添加clearfix。这种方法和第二种的本质一样，只是这种让你写起来更方便。（用的最多）</p></li>
+<li><p>4、给浮动元素的父级添加overflow：hidden；</p></li>
+</ul>
+
+<pre class="prettyprint hljs-dark"><code class="hljs scss"><div class="hljs-line"><span class="hljs-selector-class">.clearfix</span>:after{
+</div><div class="hljs-line">        <span class="hljs-attribute">display</span>:block;
+</div><div class="hljs-line">        <span class="hljs-attribute">content</span>:<span class="hljs-string">""</span>;
+</div><div class="hljs-line">        <span class="hljs-attribute">height</span>:<span class="hljs-number">0</span>;
+</div><div class="hljs-line">        <span class="hljs-attribute">font-size</span>:<span class="hljs-number">0</span>;
+</div><div class="hljs-line">        <span class="hljs-attribute">visibility</span>: hidden;
+</div><div class="hljs-line">        <span class="hljs-attribute">clear</span>:both;
+</div><div class="hljs-line">    }
+</div><div class="hljs-line">    <span class="hljs-selector-class">.clearfix</span>{
+</div><div class="hljs-line">        *zoom:<span class="hljs-number">1</span>;
+</div><div class="hljs-line">    }
+</div></code></pre>
+
+
+
+<h4 id="浮动的本质最初是为了实现图文混排场景一张图片和一些文字当我们给图片设置浮动的时候文字就会环绕图片进行排版">浮动的本质：最初是为了实现图文混排。场景，一张图片和一些文字，当我们给图片设置浮动的时候，文字就会环绕图片进行排版。</h4>
+
+
+
+<h4 id="伪类">伪类</h4>
+
+<blockquote>
+  <p>需要注意：content即使里面你不需要写内容，咱们也要把这个content:” “;也要写上。 <br>
+  使用场景，如果不想在结构中增加元素了，就可以用这种方式，比较常见的就是列表前面的icon;</p>
+</blockquote>
+
+<pre class="prettyprint hljs-dark"><code class="hljs xml"><div class="hljs-line"><span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="css"></span>
+</div><div class="hljs-line"><span class="css">       <span class="hljs-selector-tag">p</span><span class="hljs-selector-pseudo">::before</span>{</span>
+</div><div class="hljs-line"><span class="css">           <span class="hljs-attribute">display</span>:inline-block;</span>
+</div><div class="hljs-line"><span class="css">           <span class="hljs-attribute">content</span>:<span class="hljs-string">"大家都很棒！"</span>;</span>
+</div><div class="hljs-line"><span class="css">           <span class="hljs-attribute">color</span>:red;</span>
+</div><div class="hljs-line"><span class="css">       } </span>
+</div><div class="hljs-line"><span class="css">       <span class="hljs-selector-tag">p</span><span class="hljs-selector-pseudo">::after</span>{</span>
+</div><div class="hljs-line"><span class="css">           <span class="hljs-attribute">display</span>: inline-block;</span>
+</div><div class="hljs-line"><span class="css">           <span class="hljs-attribute">content</span>:<span class="hljs-string">"大家成功毕业"</span>;</span>
+</div><div class="hljs-line"><span class="css">           <span class="hljs-attribute">color</span>:green;</span>
+</div><div class="hljs-line"><span class="css">       }</span>
+</div><div class="hljs-line"><span class="css"></span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>css第四期<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+</div></code></pre>
+
+
+
+<h4 id="overflow-几个值">overflow 几个值：</h4>
+
+<ul><li><p>hidden；超出隐藏</p></li>
+<li><p>auto；当内容大于盒子的宽高的时候，会自动加滚动条</p></li>
+<li><p>scroll; 不管内容多少，始终加滚动条</p></li>
+</ul>
+
+
+
+<h4 id="background几个常用的属性">background几个常用的属性</h4>
+
+<ul><li><p>background-color:背景颜色</p></li>
+<li><p>background-image:url(“”);背景图片</p></li>
+<li><p>background-position 背景位置</p>
+
+<ul>
+<li><p>水平：left、center、right</p></li>
+<li><p>垂直：top、center、bottom</p></li>
+<li><p>用的比较多的center、center</p></li></ul></li>
+<li><p>background-attachment:fixed/scroll;</p></li>
+<li><p>background-repeat:</p>
+
+<ul>
+<li><p>x 轴：repeat-x；</p></li>
+<li><p>y轴：repeat-y;</p></li>
+<li><p>no-repeat 不平铺</p></li></ul></li>
+<li><p>background-size:</p>
+
+<ul>
+<li><p>可以跟具体的像素值，例如background-size:50px 50px;让图片的宽是50px,高也是50px;</p></li>
+<li><p>百分比background-size:100% 100%;</p></li>
+<li><p>cover;为了把图片铺满整个容器，有可能会让图片的一部分内容不能显示完全。</p></li>
+<li><p>contain：以最合适的方式进行缩放，只要一边能够铺满宽或者高，就停止放大。</p></li></ul></li>
+</ul>
+
+
+
+<h4 id="绝对路径和相对路径">绝对路径和相对路径</h4>
+
+<ul><li><p>绝对路径：不管是内部还是外部的链接，都能访问到，例如带域名的线上的网址或者是电脑磁盘中的路径。</p></li>
+<li><p>相对路径：如果是同级，直接写名字，如果是下一级，用”/ “;如果是上一级用“../”,如果是上两级就是“../../”,依次类推。</p></li>
+</ul></div></body></html>

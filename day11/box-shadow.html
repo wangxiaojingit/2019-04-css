@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    *{
+        margin:0;
+        padding:0;
+    }
+    body{
+        background:#000;
+    }
+    .box1{
+        width:200px;
+        height:200px;
+        background:gold;
+        border-radius: 50%;
+        /* 
+          第一个值：阴影水平偏移
+          第二个值：阴影垂直偏移
+          第三个值：阴影的模糊度(模糊的距离)
+          第四个值：阴影的大小
+          第五个值：颜色
+
+          第六个值：默认是outset  inset 内阴影
+        
+         */
+        box-shadow:1px 1px 10px 4px lightblue;
+    }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+</body>
+</html>

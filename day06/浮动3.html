@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='keywords' content='关键词'>
+    <meta name='description' content='描述的文字'>
+    <title>Document</title>
+    <style>
+    .parent{
+       width:300px;
+       background:green;
+       overflow: hidden;
+      
+    }
+    .box1,.box2{
+        width:100px;
+        height:100px;
+        background:gold;
+    }
+    .box1{
+        float:left;
+    }
+    .box2{
+        background:pink;
+    }
+    .last{
+        clear:both;
+    }
+    .clearfix:after{
+        display:block;
+        content:"";
+        height:0;
+        font-size:0;
+        visibility: hidden;
+        clear:both;
+    }
+    .clearfix{
+        *zoom:1;
+    }
+    </style>
+</head>
+<body>
+    <div class="parent clearfix ">
+       <div class="box1"></div>
+    
+    </div>
+    <div class="box2">
+       
+    </div>
+</body>
+</html>

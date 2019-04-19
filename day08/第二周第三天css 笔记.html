@@ -1,0 +1,147 @@
+<!DOCTYPE html><html><head><title>第二周第三天css 笔记</title><meta charset='utf-8'><link href='https://cdn.maxiang.io/res-min/themes/marxico.css' rel='stylesheet'><style>
+.note-content  {font-family: ADMUI3Lg, 'Helvetica Neue', Arial, 'Hiragino Sans GB', STHeiti, 'Microsoft YaHei', 'WenQuanYi Micro Hei', SimSun, Song, sans-serif;}
+
+</style></head><body><div id='preview-contents' class='note-content'>
+                        
+                    
+
+<div><div class="toc"><div class="toc">
+<ul>
+<li><ul>
+<li><ul>
+<li><a href="#第二周第三天css-笔记">第二周第三天css 笔记</a></li>
+<li><a href="#插入图片img的问题">插入图片img的问题</a></li>
+<li><a href="#背景具有透明度">背景具有透明度</a></li>
+<li><a href="#精灵图">精灵图</a></li>
+<li><a href="#字体图标库httpswwwiconfontcn">字体图标库：https://www.iconfont.cn/</a></li>
+<li><a href="#通过伪类写线">通过伪类写线</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+<h3 id="第二周第三天css-笔记">第二周第三天css 笔记</h3>
+
+<h3 id="插入图片img的问题">插入图片img的问题</h3>
+
+<blockquote>
+  <p>当我们在html中通过img标签插入一张图片的时候，我们会发现图片和父盒子的底部有一个白色的空隙，我们如何解决呢？ <br>
+    我们可以把img 转换成块级元素，就可以消除缝隙</p>
+</blockquote>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="hljs xml"><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-meta">&lt;!DOCTYPE html&gt;</span>
+</div><div class="hljs-line"><span class="hljs-tag">&lt;<span class="hljs-name">html</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">"en"</span>&gt;</span>
+</div><div class="hljs-line"><span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+</div><div class="hljs-line">    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">"UTF-8"</span>&gt;</span>
+</div><div class="hljs-line">    <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>Title<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+</div><div class="hljs-line">    <span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="css"></span>
+</div><div class="hljs-line"><span class="css">        *{</span>
+</div><div class="hljs-line"><span class="css">            <span class="hljs-attribute">margin</span>:<span class="hljs-number">0</span>;<span class="hljs-attribute">padding</span>:<span class="hljs-number">0</span>;</span>
+</div><div class="hljs-line"><span class="css">        }</span>
+</div><div class="hljs-line"><span class="css">        <span class="hljs-selector-class">.box</span>{</span>
+</div><div class="hljs-line"><span class="css">            <span class="hljs-attribute">width</span>:<span class="hljs-number">200px</span>;</span>
+</div><div class="hljs-line"><span class="css">            <span class="hljs-attribute">border</span>:<span class="hljs-number">1px</span> solid red;</span>
+</div><div class="hljs-line"><span class="css">            <span class="hljs-attribute">margin</span>:<span class="hljs-number">0</span> auto;</span>
+</div><div class="hljs-line"><span class="css">        }</span>
+</div><div class="hljs-line"><span class="css">        <span class="hljs-selector-tag">img</span>{</span>
+</div><div class="hljs-line"><span class="css">            <span class="hljs-attribute">display</span>:block;</span>
+</div><div class="hljs-line"><span class="css">        }</span>
+</div><div class="hljs-line"><span class="css">    </span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
+</div><div class="hljs-line"><span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+</div><div class="hljs-line"><span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+</div><div class="hljs-line">  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"box"</span>&gt;</span>
+</div><div class="hljs-line">      <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"images/head.gif"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">""</span>&gt;</span>
+</div><div class="hljs-line">  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+</div><div class="hljs-line"><span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+</div><div class="hljs-line"><span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+</div><div class="hljs-line"><wbr>
+</div></code></pre>
+
+<h3 id="背景具有透明度">背景具有透明度</h3>
+
+<blockquote>
+  <p>rgba 中前三个值代表的是R、G、B 颜色值，最后一个代表的是透明度，0.6就代表是百分之60的透明度，如果是1，代表不透明。</p>
+</blockquote>
+
+<pre class="prettyprint hljs-dark"><code class="hljs css"><div class="hljs-line"><span class="hljs-selector-tag">background</span><span class="hljs-selector-pseudo">:rgba(0</span>,0,0,0<span class="hljs-selector-class">.6</span>);
+</div><div class="hljs-line"><wbr>
+</div></code></pre>
+
+<h3 id="精灵图">精灵图</h3>
+
+<blockquote>
+  <p>在做项目的时候，有时候咱们为了优化，减少http请求，会把多张图片合并到一张图片上面，这种图就是“精灵图”，也称“雪碧图”。(只针对小图) <br>
+   精灵图的原理：通过改变background-position。再记住一点，在写精灵图的时候，background-position的x轴，y轴的值一定的负的。</p>
+</blockquote>
+
+<h3 id="字体图标库httpswwwiconfontcn">字体图标库：<a href="https://www.iconfont.cn/" target="_blank">https://www.iconfont.cn/</a></h3>
+
+<h3 id="通过伪类写线">通过伪类写线</h3>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="hljs xml"><div class="hljs-line"><span class="hljs-meta">&lt;!DOCTYPE html&gt;</span>
+</div><div class="hljs-line"><span class="hljs-tag">&lt;<span class="hljs-name">html</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">"en"</span>&gt;</span>
+</div><div class="hljs-line"><span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+</div><div class="hljs-line">    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">"UTF-8"</span>&gt;</span>
+</div><div class="hljs-line">    <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>line<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+</div><div class="hljs-line">    <span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="css"></span>
+</div><div class="hljs-line"><span class="css">        *{</span>
+</div><div class="hljs-line"><span class="css">            <span class="hljs-attribute">margin</span>:<span class="hljs-number">0</span>;<span class="hljs-attribute">padding</span>:<span class="hljs-number">0</span>;</span>
+</div><div class="hljs-line"><span class="css">        }</span>
+</div><div class="hljs-line"><span class="css">        <span class="hljs-selector-tag">ul</span>,<span class="hljs-selector-tag">ol</span>{</span>
+</div><div class="hljs-line"><span class="css">            <span class="hljs-attribute">list-style</span>:none;</span>
+</div><div class="hljs-line"><span class="css">        }</span>
+</div><div class="hljs-line"><span class="css">        <span class="hljs-selector-tag">ul</span> <span class="hljs-selector-tag">li</span>{</span>
+</div><div class="hljs-line"><span class="css">            <span class="hljs-attribute">width</span>:<span class="hljs-number">100px</span>;</span>
+</div><div class="hljs-line"><span class="css">            <span class="hljs-attribute">height</span>:<span class="hljs-number">100px</span>;</span>
+</div><div class="hljs-line"><span class="css">            <span class="hljs-attribute">float</span>:left;</span>
+</div><div class="hljs-line"><span class="css">            <span class="hljs-attribute">background</span>:green;</span>
+</div><div class="hljs-line"><span class="css">            <span class="hljs-attribute">position</span>:relative;</span>
+</div><div class="hljs-line"><span class="css">        }</span>
+</div><div class="hljs-line"><span class="css">        <span class="hljs-selector-tag">ul</span> <span class="hljs-selector-tag">li</span><span class="hljs-selector-pseudo">:after</span>{</span>
+</div><div class="hljs-line"><span class="css">            <span class="hljs-attribute">display</span>: block;</span>
+</div><div class="hljs-line"><span class="css">            <span class="hljs-attribute">content</span>: <span class="hljs-string">""</span>;</span>
+</div><div class="hljs-line"><span class="css">            <span class="hljs-attribute">width</span>:<span class="hljs-number">1px</span>;</span>
+</div><div class="hljs-line"><span class="css">            <span class="hljs-attribute">height</span>:<span class="hljs-number">90px</span>;</span>
+</div><div class="hljs-line"><span class="css">            <span class="hljs-attribute">background</span>:red;</span>
+</div><div class="hljs-line"><span class="css">            <span class="hljs-attribute">margin-top</span>:<span class="hljs-number">5px</span>;</span>
+</div><div class="hljs-line"><span class="css">        }</span>
+</div><div class="hljs-line"><span class="css">        <span class="hljs-selector-tag">ul</span> <span class="hljs-selector-tag">li</span><span class="hljs-selector-pseudo">:before</span>{</span>
+</div><div class="hljs-line"><span class="css">            <span class="hljs-attribute">display</span>: block;</span>
+</div><div class="hljs-line"><span class="css">            <span class="hljs-attribute">content</span>: <span class="hljs-string">""</span>;</span>
+</div><div class="hljs-line"><span class="css">            <span class="hljs-attribute">position</span>:absolute;</span>
+</div><div class="hljs-line"><span class="css">            <span class="hljs-attribute">bottom</span>:<span class="hljs-number">0px</span>;</span>
+</div><div class="hljs-line"><span class="css">            <span class="hljs-attribute">left</span>:<span class="hljs-number">0px</span>;</span>
+</div><div class="hljs-line"><span class="css">            <span class="hljs-attribute">width</span>:<span class="hljs-number">90px</span>;</span>
+</div><div class="hljs-line"><span class="css">            <span class="hljs-attribute">height</span>:<span class="hljs-number">1px</span>;</span>
+</div><div class="hljs-line"><span class="css">            <span class="hljs-attribute">background</span>:red;</span>
+</div><div class="hljs-line"><span class="css">        }</span>
+</div><div class="hljs-line"><span class="css">        <span class="hljs-comment">/*ul li:nth-child(2):before{*/</span></span>
+</div><div class="hljs-line"><span class="css">            <span class="hljs-comment">/*display: none;*/</span></span>
+</div><div class="hljs-line"><span class="css">        <span class="hljs-comment">/*} */</span></span>
+</div><div class="hljs-line"><span class="css">        <span class="hljs-selector-tag">ul</span> <span class="hljs-selector-tag">li</span><span class="hljs-selector-class">.top</span><span class="hljs-selector-pseudo">:before</span>{</span>
+</div><div class="hljs-line"><span class="css">            <span class="hljs-attribute">display</span>: none;</span>
+</div><div class="hljs-line"><span class="css">        }</span>
+</div><div class="hljs-line"><span class="css">    </span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+</div><div class="hljs-line"><span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+</div><div class="hljs-line">   <span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
+</div><div class="hljs-line">       <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+</div><div class="hljs-line">       <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"top"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+</div><div class="hljs-line">       <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"top"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+</div><div class="hljs-line">       <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"top"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+</div><div class="hljs-line">       <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+</div><div class="hljs-line">   <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+</div><div class="hljs-line"><span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+</div><div class="hljs-line"><span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+</div><div class="hljs-line"><wbr>
+</div></code></pre></div></body></html>

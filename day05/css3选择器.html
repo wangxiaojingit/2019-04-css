@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='keywords' content='关键词'>
+    <meta name='description' content='描述的文字'>
+    <title>Document</title>
+    <style>
+       .box>p:nth-child(even){
+          background:green;
+       }
+       .box>p:first-child{
+           background:lightblue;
+       }
+       .box>p:last-child{
+           background:lightcyan;
+       }
+       /* .box>p:nth-child(8){
+        background:green;
+       } */
+       /* .box>p:nth-of-type(6){
+         background:red;
+       } */
+       .box>p:first-of-type{
+        background:lightseagreen;
+       }
+       .box>p:last-of-type{
+           background:lightseagreen;
+       }
+       .box>p:nth-last-of-type(2){
+        background:red;
+       }
+       
+    </style>
+</head>
+<body>
+    <div class="box">
+        <p>p1</p>
+        <p>p2</p>
+        <p>p3</p>
+        <p>p4</p>
+        <p>p5</p>
+        <h1>h1</h1>
+        <h3>h3</h3>
+        <p>p6</p>
+    </div>
+</body>
+</html>

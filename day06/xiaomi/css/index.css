@@ -1,0 +1,73 @@
+/* 清除页面中所有元素自带的margin和padding */
+*{
+    margin:0;padding:0;
+}
+/* 清除a标签的下划线 */
+a{
+    text-decoration: none;
+}
+/* 清除列表前面默认样式 */
+ul,ol{
+    list-style: none;
+}
+
+.clearfix:after{
+    display:block;
+    content:"";
+    height:0;
+    font-size:0;
+    visibility: hidden;
+    clear:both;
+}
+.clearfix{
+    *zoom:1;
+}
+
+/* 导航模块 */
+.nav{
+    height:40px;
+    background:#333;
+    color:#b0b0b0;
+    font-size:12px;
+}
+.nav a{
+    color:#b0b0b0; 
+}
+.md{
+    width:1226px;
+    margin:0 auto;
+}
+.navIn{
+    height:40px;
+    line-height:40px;
+    
+}
+.navInLeft{
+    height:40px;
+    float:left;
+}
+.navInLeft>span,.navInLeft>a{
+    float:left;
+}
+.navInLeft>span,.navInMessage>span{
+    margin:0 6px;
+}
+.navInRight{
+    height:40px;
+    float:right;
+}
+.navInMessage{
+    float:left;
+}
+.shoppingCart{
+    float:right;
+    width:120px;
+    height:40px;
+    background:#424242 url("../images/cart.png") 18px center no-repeat;
+    text-indent: 44px;
+    margin-left:28px;
+}
+.shoppingCart:hover{
+    background:#fff;
+    color:gold;
+}

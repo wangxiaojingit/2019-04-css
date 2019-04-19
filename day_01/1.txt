@@ -1,0 +1,23 @@
+第一天html+css
+
+ctrl+  放大
+
+ctrl- 缩小
+
+
+markdown 的用法：
+
+生成目录 [toc]
+标题分为1-6级，快捷键：ctrl+1~5 
+加粗：ctrl+b
+斜体：ctrl+i
+分割线：***
+引用：>
+列表：+ 或者-  tab键生成子列表，shift+tab 回退上一级
+链接：ctrl+l
+图片：ctrl+g 或者直接粘贴：ctrl+v
+表格：ctrl+alt+t
+代码块：ctrl+k  多行连续按三次
+帮助文档快捷键：ctrl+/
+最大化编辑区：ctrl+enter
+最大化预览区：ctrl+alt+enter

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='keywords' content='关键词'>
+    <meta name='description' content='描述的文字'>
+    <title>单选功能</title>
+</head>
+<body>
+    <!-- 
+        单选功能：
+        input框加相同的name，就可以实现单选
+        文字关联功能实现：把文字用一个label标签包裹起来，然后给关联的input 起一个id，id名字和label中的for属性名字一致。
+
+
+     -->
+    选择性别：<label for="man">男</label><input id="man" type="radio" name="sex">  <label for="woman">女</label> <input type="radio" name="sex" id="woman">
+
+
+    <br>
+    <!-- 
+       checked:默认勾选
+
+
+     -->
+    我的爱好：
+    <label for="song">唱歌</label>
+    <input id="song" type="checkbox" checked> 
+    <label for="dance">跳舞</label>
+    <input type="checkbox" checked id="dance">
+     <label for="look">看书</label> 
+     <input type="checkbox" id="look"> 
+     <label for="run">运动</label>
+      <input type="checkbox" id="run">
+
+
+
+      选择性别：男<input id="man" type="radio" name="sex">女<input type="radio" name="sex" id="woman">
+</body>
+</html>

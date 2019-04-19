@@ -1,0 +1,227 @@
+<!DOCTYPE html><html><head><title>第五天css笔记</title><meta charset='utf-8'><link href='https://cdn.maxiang.io/res-min/themes/marxico.css' rel='stylesheet'><style>
+.note-content  {font-family: ADMUI3Lg, 'Helvetica Neue', Arial, 'Hiragino Sans GB', STHeiti, 'Microsoft YaHei', 'WenQuanYi Micro Hei', SimSun, Song, sans-serif;}
+
+</style></head><body><div id='preview-contents' class='note-content'>
+                        
+                    
+
+<div><div class="toc"><div class="toc">
+<ul>
+<li><ul>
+<li><ul>
+<li><a href="#第五天css笔记">第五天css笔记</a><ul>
+<li><a href="#常用的表单元素">常用的表单元素</a></li>
+<li><a href="#盒模型">盒模型</a></li>
+<li><a href="#面试题盒模型主要包括哪几部分">面试题：盒模型主要包括哪几部分？</a></li>
+<li><a href="#盒子的总大小计算方式">盒子的总大小计算方式：</a></li>
+<li><a href="#盒模型的分类">盒模型的分类：</a></li>
+<li><a href="#margin值">margin值：</a></li>
+<li><a href="#面试题margin值穿透的问题">面试题margin值穿透的问题：</a></li>
+<li><a href="#margin值合并问题">margin值合并问题</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+
+<h3 id="第五天css笔记">第五天css笔记</h3>
+
+
+
+<h4 id="常用的表单元素">常用的表单元素</h4>
+
+<p>1、input输入框，type类型</p>
+
+<ul><li><p>文本输入框：type=”text”</p></li>
+<li><p>密码输入框：type=“password”</p></li>
+<li><p>提交按钮：type=“submit”</p></li>
+<li><p>重置按钮：type=”reset”</p></li>
+<li><p>普通按钮：type=“button” value=“按钮的名字”</p></li>
+<li><p>单选按钮：type=“radio”</p></li>
+<li><p>多选按钮：type=“checkbox” </p></li>
+</ul>
+
+<p>2、button按钮 <br>
+3、文本域：textarea <br>
+4、form表单 <br>
+5、select 下拉菜单</p>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="hljs xml"><div class="hljs-line"> <span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">action</span>=<span class="hljs-string">""</span>&gt;</span>
+</div><div class="hljs-line">        <span class="hljs-comment">&lt;!-- 文本输入框 --&gt;</span>
+</div><div class="hljs-line">        <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span>&gt;</span>
+</div><div class="hljs-line">        <span class="hljs-comment">&lt;!-- 密码输入框 --&gt;</span>
+</div><div class="hljs-line">        <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"password"</span>&gt;</span>
+</div><div class="hljs-line">        <span class="hljs-comment">&lt;!-- 重置按钮 --&gt;</span>
+</div><div class="hljs-line">        <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"reset"</span>&gt;</span>
+</div><div class="hljs-line">        <span class="hljs-comment">&lt;!-- 提交按钮 --&gt;</span>
+</div><div class="hljs-line">        <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"submit"</span>&gt;</span>
+</div><div class="hljs-line">        <span class="hljs-comment">&lt;!-- 按钮 --&gt;</span>
+</div><div class="hljs-line">        <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"重置"</span>&gt;</span>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">        <span class="hljs-comment">&lt;!-- 按钮 --&gt;</span>
+</div><div class="hljs-line">        <span class="hljs-tag">&lt;<span class="hljs-name">button</span>&gt;</span>button按钮<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+</div><div class="hljs-line">        <span class="hljs-comment">&lt;!-- 单选 --&gt;</span>
+</div><div class="hljs-line">        <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"radio"</span>&gt;</span>
+</div><div class="hljs-line">        <span class="hljs-comment">&lt;!-- 多选 --&gt;</span>
+</div><div class="hljs-line">        <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"checkbox"</span>&gt;</span>
+</div><div class="hljs-line">        <span class="hljs-comment">&lt;!-- 文本域 </span>
+</div><div class="hljs-line"><span class="hljs-comment">        cols：代表的是列</span>
+</div><div class="hljs-line"><span class="hljs-comment">        rows:代表的行</span>
+</div><div class="hljs-line"><span class="hljs-comment">        --&gt;</span>
+</div><div class="hljs-line">        <span class="hljs-tag">&lt;<span class="hljs-name">textarea</span> <span class="hljs-attr">name</span>=<span class="hljs-string">""</span> <span class="hljs-attr">id</span>=<span class="hljs-string">""</span> <span class="hljs-attr">cols</span>=<span class="hljs-string">"30"</span> <span class="hljs-attr">rows</span>=<span class="hljs-string">"30"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">textarea</span>&gt;</span>
+</div><div class="hljs-line">        <span class="hljs-comment">&lt;!-- 下拉框 </span>
+</div><div class="hljs-line"><span class="hljs-comment">           selected:默认选中的项</span>
+</div><div class="hljs-line"><span class="hljs-comment">           disabled：禁止选择</span>
+</div><div class="hljs-line"><span class="hljs-comment">        --&gt;</span>
+</div><div class="hljs-line">        <span class="hljs-tag">&lt;<span class="hljs-name">select</span> <span class="hljs-attr">name</span>=<span class="hljs-string">""</span> <span class="hljs-attr">id</span>=<span class="hljs-string">""</span>&gt;</span>
+</div><div class="hljs-line">                 <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">""</span>&gt;</span>香蕉<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+</div><div class="hljs-line">                 <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">""</span> <span class="hljs-attr">selected</span>&gt;</span>苹果<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+</div><div class="hljs-line">                 <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">""</span> <span class="hljs-attr">disabled</span>&gt;</span>菠萝<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+</div><div class="hljs-line">         <span class="hljs-tag">&lt;/<span class="hljs-name">select</span>&gt;</span>
+</div><div class="hljs-line">    <span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
+</div></code></pre>
+
+<p>6、单选按钮功能实现：把要进行单选的input框添加一个name属性，name的值相同，就能实现单选。</p>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="hljs applescript"><div class="hljs-line">选择性别：男&lt;input <span class="hljs-built_in">id</span>=<span class="hljs-string">"man"</span> type=<span class="hljs-string">"radio"</span> <span class="hljs-built_in">name</span>=<span class="hljs-string">"sex"</span>&gt;女&lt;input type=<span class="hljs-string">"radio"</span> <span class="hljs-built_in">name</span>=<span class="hljs-string">"sex"</span> <span class="hljs-built_in">id</span>=<span class="hljs-string">"woman"</span>&gt;
+</div></code></pre>
+
+<p>7、实现关联，首先要把文字用一个label 标签包裹起来，然后给label上的属性 for=“value1”，给要关联的input框的id=“value2”； value1和value2 的值相同，就能实现文字关联。</p>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="hljs stata"><div class="hljs-line">选择性别：&lt;<span class="hljs-keyword">label</span> <span class="hljs-keyword">for</span>=<span class="hljs-string">"man"</span>&gt;男&lt;/<span class="hljs-keyword">label</span>&gt;&lt;<span class="hljs-keyword">input</span> id=<span class="hljs-string">"man"</span> <span class="hljs-keyword">type</span>=<span class="hljs-string">"radio"</span> name=<span class="hljs-string">"sex"</span>&gt;  &lt;<span class="hljs-keyword">label</span> <span class="hljs-keyword">for</span>=<span class="hljs-string">"woman"</span>&gt;女&lt;/<span class="hljs-keyword">label</span>&gt; &lt;<span class="hljs-keyword">input</span> <span class="hljs-keyword">type</span>=<span class="hljs-string">"radio"</span> name=<span class="hljs-string">"sex"</span> id=<span class="hljs-string">"woman"</span>&gt;
+</div></code></pre>
+
+<p>8、多选按钮</p>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="hljs stata"><div class="hljs-line">我的爱好：
+</div><div class="hljs-line">    &lt;<span class="hljs-keyword">label</span> <span class="hljs-keyword">for</span>=<span class="hljs-string">"song"</span>&gt;唱歌&lt;/<span class="hljs-keyword">label</span>&gt;
+</div><div class="hljs-line">    &lt;<span class="hljs-keyword">input</span> id=<span class="hljs-string">"song"</span> <span class="hljs-keyword">type</span>=<span class="hljs-string">"checkbox"</span> checked&gt; 
+</div><div class="hljs-line">    &lt;<span class="hljs-keyword">label</span> <span class="hljs-keyword">for</span>=<span class="hljs-string">"dance"</span>&gt;跳舞&lt;/<span class="hljs-keyword">label</span>&gt;
+</div><div class="hljs-line">    &lt;<span class="hljs-keyword">input</span> <span class="hljs-keyword">type</span>=<span class="hljs-string">"checkbox"</span> checked id=<span class="hljs-string">"dance"</span>&gt;
+</div><div class="hljs-line">    &lt;<span class="hljs-keyword">label</span> <span class="hljs-keyword">for</span>=<span class="hljs-string">"look"</span>&gt;看书&lt;/<span class="hljs-keyword">label</span>&gt; 
+</div><div class="hljs-line">    &lt;<span class="hljs-keyword">input</span> <span class="hljs-keyword">type</span>=<span class="hljs-string">"checkbox"</span> id=<span class="hljs-string">"look"</span>&gt; 
+</div><div class="hljs-line">    &lt;<span class="hljs-keyword">label</span> <span class="hljs-keyword">for</span>=<span class="hljs-string">"run"</span>&gt;运动&lt;/<span class="hljs-keyword">label</span>&gt;
+</div><div class="hljs-line">    &lt;<span class="hljs-keyword">input</span> <span class="hljs-keyword">type</span>=<span class="hljs-string">"checkbox"</span> id=<span class="hljs-string">"run"</span>&gt;
+</div></code></pre>
+
+<p>9、常用的表单属性</p>
+
+<ul><li><p>1、placeholder:请输入提示文字</p></li>
+<li><p>2、autofocus：自动获取焦点</p></li>
+<li><p>3、required: 验证</p></li>
+<li><p>4、checked：默认项</p></li>
+<li><p>5、selected：下拉框默认选中项</p></li>
+<li><p>6、disabled:禁止使用</p></li>
+</ul>
+
+<p>10、样式类</p>
+
+<ul><li><p>1、清除表单元素的蓝色线：outline：none；</p></li>
+<li><p>2、textarea 中禁止拖动：resize：none</p></li>
+</ul>
+
+
+
+<h4 id="盒模型">盒模型</h4>
+
+<p>盒模型是一种写页面的思维方式，每个元素都可以看成一个盒子，盒子的内容就是content，内容到盒子边框的距离就是padding（内填充），盒子的边框就是border；盒子与盒子之间的距离，就是margin；</p>
+
+<blockquote>
+  <p>用手机盒子来举例，手机就是content，手机盒子中的白色泡沫就是padding，手机盒子的厚度就是border，多个手机盒子之间的距离就是margin；</p>
+</blockquote>
+
+
+
+<h4 id="面试题盒模型主要包括哪几部分">面试题：盒模型主要包括哪几部分？</h4>
+
+<ul><li><p>content</p></li>
+<li><p>padding</p></li>
+<li><p>border</p></li>
+<li><p>margin</p></li>
+</ul>
+
+
+
+<h4 id="盒子的总大小计算方式">盒子的总大小计算方式：</h4>
+
+<blockquote>
+  <p>盒子总的width=content的宽+2*padding+2*border; <br>
+  盒子总的height=content的高+2*padding+2*border;</p>
+</blockquote>
+
+
+
+<h4 id="盒模型的分类">盒模型的分类：</h4>
+
+<ul><li><p>标准盒模型：box-sizing:content-box;（默认）</p></li>
+<li><p>ie盒模型：box-sizing:border-box;(在写页面的时候通常用这个)。</p></li>
+</ul>
+
+<blockquote>
+  <p>标准盒模型，咱们代码中所写的那个宽度,或者高度，就变成了content部分的宽、高，总盒子的大小就是content+2*padding+2*border；</p>
+  
+  <p>ie盒模型，咱们代码中所写width和高度就是整个盒子的总大小，content部分会自动进行计算。</p>
+</blockquote>
+
+
+
+<h4 id="margin值">margin值：</h4>
+
+<ul><li><p>margin-left:距左；</p></li>
+<li><p>margin-right:距右；</p></li>
+<li><p>margin-top:距上；</p></li>
+<li><p>margin-bottom：距下；</p></li>
+</ul>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="hljs css"><div class="hljs-line"><span class="hljs-selector-class">.box1</span>{
+</div><div class="hljs-line">        <span class="hljs-comment">/* 上右下左，按照顺时针排列 */</span>
+</div><div class="hljs-line">        <span class="hljs-comment">/* margin:10px 100px 200px 300px; */</span>
+</div><div class="hljs-line">        <span class="hljs-comment">/* 上、左右、下 */</span>
+</div><div class="hljs-line">        <span class="hljs-comment">/* margin:10px 100px 200px; */</span>
+</div><div class="hljs-line">        <span class="hljs-comment">/* 上下、左右 */</span>
+</div><div class="hljs-line">        <span class="hljs-attribute">margin</span>:<span class="hljs-number">10px</span> <span class="hljs-number">100px</span>;
+</div><div class="hljs-line">        <span class="hljs-comment">/* 上下左右四个方向一致 */</span>
+</div><div class="hljs-line">        <span class="hljs-attribute">margin</span>:<span class="hljs-number">10px</span>;
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">    }
+</div></code></pre>
+
+
+
+<h4 id="面试题margin值穿透的问题">面试题margin值穿透的问题：</h4>
+
+<p>当一个大盒子包含一个小盒子，大盒子没有设置border-top或者padding-top的时候，我们给小盒子设置margin-top，大盒子会跟着小盒子一起向下移动，这个现象就叫做margin值穿透。</p>
+
+<p>解决办法：</p>
+
+<ul><li><p>1、给父盒子添加一个ovflow:hidden;</p></li>
+<li><p>2、给父盒子设置一个border-top:1px solid transparent;</p></li>
+<li><p>3、margin-top既然存在一定的问题，我们可以改用padding值，给父盒子设置padding-top同样可以达到一样的效果。</p></li>
+</ul>
+
+
+
+<h4 id="margin值合并问题">margin值合并问题</h4>
+
+<blockquote>
+  <p>当两个兄弟元素，例如两个div元素，一个是box1，一个是box2，他俩是垂直排列，当我给box1设置一个margin-bottom：30px; 同时给box2设置了一个margin-top：50px;这两个盒子之间的距离并不是我们所想的30+50，而是选择最大的那个值。</p>
+  
+  <p>解决办法，避免上面的情况，可以给一个盒子设置就行了，或者是设置成都是同方向的就可以了。</p>
+</blockquote></div></body></html>

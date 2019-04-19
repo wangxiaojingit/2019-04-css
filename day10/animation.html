@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='keywords' content='关键词'>
+    <meta name='description' content='描述的文字'>
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;padding:0;
+        }
+        .box{
+            width:200px;
+            height:200px;
+            background:green;
+            /* 
+              无限循环infinite 
+            */
+            animation: run 2s linear 1s infinite; 
+        }
+ 
+        @keyframes run{
+           0%{
+
+           }
+           49%{
+             background:green;  
+           }
+           50%{
+               transform:translateX(500px);
+               background:chartreuse;
+           }
+
+           100%{
+            transform:translate(500px,500px);
+           }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="box"></div>
+</body>
+</html>

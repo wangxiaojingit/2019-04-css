@@ -1,0 +1,132 @@
+html{
+    font-size:100px;
+}
+
+header{
+    height:1.12rem;
+    background:#2a2a2a;
+    padding:0 0.2rem;
+    box-sizing: border-box;
+}
+.logo{
+    width:2.1rem;
+    height:.62rem;
+    background:url("../images/logo.png") center center no-repeat;
+    background-size:cover;
+    float:left;
+    margin-top:0.25rem;
+}
+.menu{
+    width:0.36rem;
+    height:0.32rem;
+    background:url("../images/menu.png") center center no-repeat;
+    background-size:cover;
+    float:right;
+    margin-top:0.4rem;
+}
+.bannerIn a{
+    height:3.41rem;
+    display:block;
+    background:url("../images/banner.png") center center no-repeat;
+    background-size:cover;
+}
+.subjectBox{
+    padding:0 0.2rem;
+    box-sizing: border-box;
+    background:#f8f8f8;
+    margin-bottom:1.3rem;
+}
+.subjectBox h3{
+    height:1rem;
+    line-height:1rem;
+    background:url("../images/book.png") left center no-repeat;
+    background-size:0.29rem 0.35rem;
+    text-indent:0.41rem;
+    color:#4C4B4B;
+    font-size:0.26rem;
+}
+.subjectBox li{
+    background:#fff;
+    box-shadow:0 0.05rem 0.06rem 0 rgba(178,178,178,0.75);
+    border-radius:0.05rem;
+    margin-bottom:0.41rem;
+}
+.subjectBox li a{
+    display:block;
+    font-size:0.28rem;
+    padding-bottom:0.34rem;
+    text-align:center;
+}
+.subjectBox li .cover{
+    height:2.8rem;
+    background:url("../images/subject.png") center center no-repeat;
+    background-size:cover;
+}
+.subjectBox li  h4{
+    color:#777;
+    margin:0.32rem 0 0.22rem 0;
+    
+}
+.subjectBox li  p{
+    color:#ed3a3a;
+}
+.foot{
+    width:100%;
+    border-top:1px solid #d5d5d5;
+    position:fixed;
+    bottom:0;
+    left:0;
+    background:#fff;
+    height:1.07rem;
+}
+.foot>li{
+   width:33.33%;
+   float:left;
+}
+.foot>li>a{
+    height:1.07rem;
+    display:block;
+    color:#ABABAB;
+}
+
+.foot>li .icon{
+    width:0.46rem;
+    height:0.32rem;
+    background:url("../images/indexIcon1.png") center center no-repeat;
+    background-size:cover;
+    /* margin:0 auto;
+    margin-top:0.21rem;
+    margin-bottom:0.08rem; */
+    margin:0.21rem auto 0.08rem auto;
+}
+.foot>li p{
+    text-align:center;
+}
+.foot>li:nth-child(2) .icon{
+    width:0.4rem;
+    height:0.39rem;
+    background-image: url("../images/subject1.png");
+    margin-top:0.16rem;
+    margin-bottom:0.11rem;
+}
+.foot>li:nth-child(3) .icon{
+    width:0.36rem;
+    height:0.36rem;
+    background-image: url("../images/center1.png");
+    margin-top:0.17rem;
+    margin-bottom:0.13rem;
+}
+
+.foot>li:nth-child(1).current .icon{
+    background-image: url("../images/indexIcon2.png");
+}
+.foot>li:nth-child(2).current .icon{
+    background-image: url("../images/subject2.png");
+}
+.foot>li:nth-child(3).current .icon{
+    background-image: url("../images/center2.png");
+}
+
+.foot .current a{
+    color:#51a7eb;
+}

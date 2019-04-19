@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='keywords' content='关键词'>
+    <meta name='description' content='描述的文字'>
+    <title>scale 缩放</title>
+    <style>
+    *{
+        margin:0;padding:0;
+    }
+    .box{
+        width:200px;
+        height:200px;
+        background:green;
+        /* 第一个值：代表的是缩放宽度的倍数 
+           第二个值：代表的是缩放的高度的倍数
+        */
+        /* transform:scale(2,0.5); */
+        /* 一个值的时候代表，宽和高同时缩放n倍 */
+        transform:scale(0.5);
+    }
+    </style>
+</head>
+<body>
+   <div class="box"></div>
+</body>
+</html>

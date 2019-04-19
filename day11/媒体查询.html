@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    *{
+        margin:0;padding:0;
+    }
+    .box{
+        width:200px;
+        height:200px;
+        background:green;
+    }
+    /* 
+       当屏幕的宽度小于600px的时候，我就让.box 这个盒子背景颜色pink
+    
+     */
+
+     @media screen and (max-width:600px){
+         .box{
+             background:pink;
+         }
+     }
+     @media screen and (min-width:700px){
+         .box{
+             background:gold;
+         }
+     }
+     /* 大于等300 小于等于800 */
+    @media screen and (min-width:300px) and (max-width:800){
+
+    }
+
+    /* 需求：小于768px的时候显示一个颜色
+             大于768到1200 显示一个颜色
+             大于1200的时候显示一个颜色 
+             */
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

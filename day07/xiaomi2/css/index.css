@@ -1,0 +1,107 @@
+.phone{
+    background:#f5f5f5;
+    padding-top:22px;
+}
+
+.md{
+    width:1226px;
+    margin:0 auto;
+}
+
+.phoneBox{
+    height:686px;
+   
+}
+.phoneBoxTitle{
+    height:58px;
+    line-height: 58px;
+    
+    color:#424242;
+}
+/* .phoneBoxTitle */
+ h3{
+    float:left;
+    font-weight:200;
+    font-size:22px;
+}
+.phoneBoxTitle a{
+    float:right;
+    color:#424242;
+    font-size:16px;
+}
+
+.phoneLeft{
+    width:234px;
+    height:614px;
+   
+    float:left;
+    background:url("../images/ac1.jpg") center center no-repeat;
+    background-size:cover;
+}
+.phoneRight{
+    width:992px;
+    height:614px;
+    
+    float:left;
+}
+.phoneRight>li{
+    width:234px;
+    height:300px;
+    background:lightblue;
+    float:left;
+    /* margin-left:14px;
+    margin-bottom:14px; */
+    margin:0 0 14px 14px;
+}
+
+
+/* 家电 */
+.homeBox{
+    background:#f5f5f5;
+}
+.top{
+    height:58px;
+   
+}
+.top h3{
+    height:58px;
+    line-height:58px;
+    float:left;
+}
+.top .homeNav{
+    float:right;
+}
+.homeNav>li{
+    float:left;
+    font-size:16px;
+    margin-left:30px;
+}
+.homeNav>li>a{
+    margin-top:15px;
+    color:#424242;
+    display:block;
+    height:26px;
+    border-bottom:2px solid transparent;
+}
+.homeNav>li>a:hover{
+    border-bottom:2px solid #ff6700;
+}
+
+.bottom>li{
+    width:234px;
+    height:300px;
+    background:lightblue;
+    float:left;
+    margin:0 14px 14px 0;
+   
+}
+.bottom .noright{
+    margin-right:0;
+}
+/* .bottom>li:nth-child(5),.bottom>li:nth-child(10),.bottom>li:nth-child(11){
+    margin-right:0;
+} */
+
+.bottom>li:nth-last-child(1),.bottom>li:nth-last-child(2){
+    height:143px;
+}

@@ -1,7 +1,0 @@
-谷歌浏览器：chromeSetup.exe
-编辑器：vscode
-笔记软件：马克飞象
-
-
-vscode
-

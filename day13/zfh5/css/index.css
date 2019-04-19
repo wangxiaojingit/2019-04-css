@@ -1,0 +1,150 @@
+html{
+    font-size:100px;
+}
+body{
+    background:#f8f8f8;
+}
+/* 头部 */
+header{
+    height:1.12rem;
+    background:#252525;
+    padding:0 0.2rem;
+    box-sizing:border-box;
+}
+header .logo{
+    margin-top:0.25rem;
+    width:2.1rem;
+    height:.62rem;
+    float:left;
+    overflow:hidden;
+}
+header .logo a{
+    display:block;
+    height:.62rem;
+    background:url("../images/logo.png") center center no-repeat;
+    background-size:cover;
+    
+}
+
+header .logo .text{
+  margin-left:-9999px;
+}
+header .menu{
+    margin-top:0.4rem;
+    width:0.36rem;
+    height:0.32rem;
+    float:right;
+    background:url("../images/menu.png") center center no-repeat;
+    background-size:cover;
+}
+
+.banner{
+    height:3.41rem;
+}
+.banner li a{
+    display:block;
+    height:3.41rem;
+    background:url("../images/banner.png") center center no-repeat;
+    background-size:cover;
+}
+
+/* 全部课程 */
+.allSubject {
+  padding:0 15px;
+  box-sizing:border-box;
+  margin-bottom: 1.07rem;
+}
+.allSubject h3{
+    background:url("../images/book.png") 0px center no-repeat;
+    background-size:0.29rem 0.35rem;
+    text-indent:0.48rem;
+    color:#4C4B4B;
+    font-size:0.26rem;
+    padding: 0.33rem 0;
+
+}
+
+.subLists a{
+    display:block;
+}
+.cover{
+   
+    height:2.8rem;
+    background:url("../images/subject.png") center center no-repeat;
+    background-size:cover;
+}
+.subLists{
+    font-size:0.28rem;
+}
+.subLists li{
+    padding-bottom:0.27rem;
+    background:#fff;
+    box-shadow:0 0.05rem 0.06rem 0 rgba(178,178,178,0.75);
+    margin-bottom:0.38rem;
+}
+.subLists h4{
+    height:0.85rem;
+    line-height:0.85rem;
+    color:#777777;
+   
+    font-weight:normal;
+    text-align:center;
+}
+.subLists p{
+    text-align:center;
+    color:#ed3a3a;
+}
+
+.footer{
+    width:100%;
+    height:1.07rem;
+    background:#fff;
+    border-top:1px solid #d5d5d5;
+    position:fixed;
+    bottom:0;
+    left:0;
+}
+.footer>li{
+    width:33.33%;
+    float:left;
+    padding-top: 0.2rem;
+    box-sizing: border-box;
+}
+.footer>li>a{
+    display:block;
+    font-size:0.16rem;
+    margin-top:0.05rem;
+   
+}
+.footer>li>a>section{
+    width:0.46rem;
+    height:0.32rem;
+    background:url("../images/indexIcon1.png") center center no-repeat;
+    background-size:cover;
+    margin:0 auto;
+}
+.footer>li:nth-child(1) .current>section{
+    background-image: url("../images/indexIcon2.png");
+}
+.footer>li:nth-child(1) .current{
+   color:#188ae4;
+}
+
+.footer>li .subjectIcon{
+    background-image:url("../images/subject1.png");
+    width:0.4rem;
+    height:0.39rem;
+}
+.footer>li .centerIcon{
+    background-image:url("../images/center1.png");
+    width:0.36rem;
+    height:0.36rem;
+}
+.footer>li>a>p{
+    text-align:center;
+}
+.footer>li>a{
+  color:#ababab;
+  font-size:16px;
+}
+

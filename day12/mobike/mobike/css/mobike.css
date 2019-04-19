@@ -1,0 +1,209 @@
+/* 
+一屏幕的高度
+*/
+html,body,.bannerBox,.banner{
+    height:100%;
+}
+.bannerBox{
+   position:relative;
+}
+
+.banner>li{
+    height:100%;
+    background:url("../images/hero-bg-1.jpg") center center no-repeat;
+    background-size:cover;
+}
+.md{
+    width:1080px;
+    padding:0 20px;
+    box-sizing:border-box;
+    margin:0 auto;
+   
+}
+/* 导航 */
+.nav{
+    width:100%;
+   
+    position: absolute;
+    left:0px;
+    top:0;
+}
+.navIn{
+    height:80px;
+}
+
+.logo{
+    width:100px;
+    height:37px;
+    float:left;
+    overflow:hidden;
+    margin-top:22px;
+}
+.navRight{
+    float:right;
+}
+
+
+/* 把logo的文字移动到屏幕一侧，不让用户看到，只要给搜索引擎看的 */
+.logoText{
+    margin-left:-9999px;
+}
+.logo a{
+    display:block;
+}
+.navRight>li{
+    float:left;
+}
+.navRight a{
+   display:block;
+   height:80px;
+   line-height:80px;
+   color:#fff;
+   font-size:16px;
+   padding:0 20px;
+}
+
+/* 广告文字 */
+.adviceBox{
+    width:100%;
+    position:absolute;
+    left:0;
+    top:50%;
+}
+.adviceBox h3{
+    font-size:68px;
+    color:#fff;
+    margin-bottom:20px;
+    
+}
+.adviceBox a{
+    padding:14px 26px;
+    font-size:22px;
+    font-weight:bold;
+    background:rgba(0,0,0,.6);
+    border-radius:6px;
+    color:#fff;
+    display: block;
+    width:295px;
+    text-align:center;
+    box-sizing: border-box;
+}
+
+.lists>li{
+    width:25%;
+    height:260px;
+    float:left;
+    border:2px solid #fff;
+    border-left-width:1px;
+    border-right-width:1px;
+    box-sizing:border-box;
+   
+}
+.lists>li>a{
+    display:block;
+    height:100%;
+    background:url("../images/libg.jpg") center center no-repeat;
+    background-size:cover;
+    padding-top: 33px;
+    box-sizing: border-box;
+}
+.lists p{
+    font-size:24px;
+    color:#fff;
+    text-align:center;
+}
+.lists>li:nth-child(1){
+    border-left:none;
+}
+.lists>li:nth-child(4){
+    border-right:none;
+}
+
+.links{
+   
+}
+.linkIn li{
+  
+    height:50px;
+    padding:45px 0;
+    width:33.33%;
+    float:left;
+}
+.linkIn .icon{
+    float:left;
+    width:50px;
+    height:50px;
+    background:url("../images/icon-wechat.png") center center no-repeat;
+    background-size:contain;
+    margin-right:10px;
+}
+
+.linkIn .iconText{
+    float:left;
+    font-size:16px;
+}
+.iconText p{
+    line-height: 22px;
+    height:22px;
+}
+.hbIcon{
+    width:220px; 
+    margin:0 auto;
+    
+   
+}
+.jfIcon {
+    float:right;
+}
+.hbIcon .icon{
+    background-image:url("../images/icon-rp.png");
+}
+.jfIcon .icon{
+    background-image:url("../images/icon-credit.png");
+}
+
+/* 
+当屏幕小于等于1080px的时候：
+1、版心消失 md的宽度变成100%
+2、右边的导航消失.navRight 
+3、图片列表每排由四个变成了两个，每个li的宽度应该变成50%；.lists>li
+
+
+*/
+
+@media screen and (max-width:1080px){
+    .md{
+        width:100%;
+    }
+    .navRight {
+       display:none;
+    }
+    .lists>li{
+        width:50%;
+    }
+}
+
+/* 
+  当屏幕小于等于640px的时候
+  1、图片列表的li的宽度变成100%
+  2、微信图片、红包那块变成三排， .linkIn li 的宽度变成100%， 
+
+*/
+@media screen and (max-width:640px){
+
+    .lists>li{
+        width:100%;
+    }
+    .linkIn li{
+        width:100%;
+    }
+    .hbIcon{
+        margin:0;
+    }
+    .jfIcon{
+        float:left;
+    }
+    .lists>li>a{
+        padding-top:20px;
+    }
+}
